@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Preferences</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at center, rgba(255, 0, 0, 0.1), rgba(255, 255, 255, 0.95));
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            animation: slideUp 1s ease-out;
+        }
+        img {
+            width: 120px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            animation: zoomIn 1s ease-in-out;
+        }
+        p {
+            color: gray;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        .link {
+            display: block;
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+        .link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: #f9f9f9;
+        }
+        .contact-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #c40d0d;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .contact-link:hover {
+            background-color: #ff0000;
+        }
+        .contact-link:active {
+            transform: translateY(-5px);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="defaultSound" src="icon_11.wav"></audio>
+    <audio id="contactSound" src="icon_05.wav"></audio>
+    <div class="container">
+        <img src="ahmed.html.jpg" alt="Logo">
+        <p>ما نوع التصميمات التي تفضلها؟</p>
+        <a href="https://ahmedelnagar.my.canva.site/products-and-services-website" class="link" onclick="playSound('defaultSound')">مونتاج الفيديو - الموشن</a>
+        <a href="https://ahmedelnagar.my.canva.site/for-print" class="link" onclick="playSound('defaultSound')">منشورات السوشيال  
+            - تصمميمات الطباعة
+            
+        </a>
+        <a href="https://ahmedelnagar.my.canva.site/for-print" class="link" onclick="playSound('defaultSound')">باقات السوشيال الميديا</a>
+        <div class="social-links"></div>
+        <a href="https://wa.me/201055148437?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" class="contact-link" onclick="playSound('contactSound')">اضغط هنا للتواصل</a>
+    </div>
+    <script>
+        function playSound(soundId) {
+            let sound = document.getElementById(soundId);
+            sound.play();
+        }
+    </script>
+</body>
+</html>
+
+
